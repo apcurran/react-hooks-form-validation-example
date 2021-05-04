@@ -56,6 +56,8 @@ function BasicForm(props) {
 
     if (!formIsValid) return;
 
+    console.table([enteredFirstName, enteredLastName, enteredEmail]);
+
     resetFirstNameInput();
     resetLastNameInput();
     resetEmailInput();
