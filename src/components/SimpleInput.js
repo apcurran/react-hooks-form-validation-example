@@ -20,6 +20,7 @@ const SimpleInput = (props) => {
   } = useInput((value) => value.includes("@"));
 
   let formIsValid = false;
+
   const nameInputClasses = nameInputHasError ? "form-control invalid" : "form-control";
   const emailInputClasses = emailInputHasError ? "form-control invalid" : "form-control";
 
@@ -30,9 +31,7 @@ const SimpleInput = (props) => {
   function formSubmissionHandler(event) {
     event.preventDefault();
 
-    if (!enteredNameIsValid) {
-      return;
-    }
+    if (!formIsValid) return;
 
     console.log(enteredName);
 
